@@ -33,7 +33,7 @@
 
 [S3 Манифест](https://github.com/loginochka/cloud-project/blob/main/h-2/s3.tf)
 
-[LAMP Манифест](https://github.com/loginochka/cloud-project/blob/main/р-2/instance-gr.tf)
+[LAMP Манифест](https://github.com/loginochka/cloud-project/blob/main/h-2/instance-gr.tf)
 
 [NLB Манифест](https://github.com/loginochka/cloud-project/blob/main/h-2/load-balancer.tf)
 
