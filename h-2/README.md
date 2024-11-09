@@ -21,8 +21,7 @@
 
  - Создать сетевой балансировщик.
  - Проверить работоспособность, удалив одну или несколько ВМ.
-4. (дополнительно)* Создать Application Load Balancer с использованием Instance group и проверкой состояния.Создать в этой приватной подсети виртуалку с внутренним IP, подключиться к ней через виртуалку, созданную ранее, и убедиться, что есть доступ к интернету.
-
+4. (дополнительно)* Создать Application Load Balancer с использованием Instance group и проверкой состояния.
  ---
 
  ### Ответ 
@@ -50,4 +49,4 @@
 [Группы безопасности](https://github.com/loginochka/cloud-project/blob/main/h-2/sec-gr.tf)
 
 
-![Результат работы](https://github.com/loginochka/cloud-project/blob/main/media/)
+![Результат работы](https://github.com/loginochka/cloud-project/blob/main/media/15.2-result.png)

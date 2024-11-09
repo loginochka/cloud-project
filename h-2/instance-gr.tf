@@ -47,9 +47,9 @@ resource "yandex_compute_instance_group" "lamp-inst-group" {
   allocation_policy {
     zones = [var.vm-zone-name[0]]
   }
-  # load_balancer {
-  #   target_group_name = var.target-group[0]
-  # }
+  load_balancer {
+    target_group_name = var.target-group[0]
+  }
   application_load_balancer {
     target_group_name = var.target-group[0]
   }
