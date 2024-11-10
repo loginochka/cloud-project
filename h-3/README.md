@@ -13,3 +13,5 @@
 [S3 Манифест](https://github.com/loginochka/cloud-project/blob/main/h-3/s3.tf)
 
 [KMS Манифест](https://github.com/loginochka/cloud-project/blob/main/h-3/kms.tf)
+
+![Результат](https://github.com/loginochka/cloud-project/blob/media/15-3-result.png)
