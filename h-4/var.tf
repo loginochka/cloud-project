@@ -10,7 +10,7 @@ variable "cloud" {
 }
 variable "svc-name" {
   type    = list(string)
-  default = ["lamp-scale"]
+  default = ["lamp-scale", "k8s-acc"]
 }
 variable "svc-access" {
   type    = list(string)
@@ -151,11 +151,11 @@ variable "vpc-name" {
 }
 variable "vpc-sub-name" {
   type    = list(string)
-  default = ["public", "private-a", "private-b", "private-d"]
+  default = ["public-a", "private-a", "private-b", "private-d", "public-b", "public-d"]
 }
 variable "vpc-sub-ip" {
   type    = list(string)
-  default = ["192.168.10.0/24", "192.168.20.0/24", "192.168.30.0/24", "192.168.40.0/24"]
+  default = ["192.168.10.0/24", "192.168.20.0/24", "192.168.30.0/24", "192.168.40.0/24", "192.168.50.0/24", "192.168.60.0/24"]
 }
 variable "vpc-zone-name" {
   type    = list(string)
@@ -175,11 +175,11 @@ variable "vpc-sec-gr-ip" {
 }
 variable "vpc-sec-gr-port-proto" {
   type    = list(string)
-  default = ["22", "ANY", "TCP", "80", "3306"]
+  default = ["22", "ANY", "TCP", "80", "3306", "ICMP"]
 }
 variable "vpc-sec-gr-name" {
   type    = list(string)
-  default = ["nat-instance-security-group", "mysql-security-group"]
+  default = ["nat-instance-security-group", "mysql-security-group", "k8s-security-group"]
 }
 #___________________________________________________
 #___________MySQL___________________________________
@@ -202,5 +202,26 @@ variable "mysql-cluster-name" {
 variable "mysql-zone-location" {
   type    = list(string)
   default = ["ru-central1-a", "ru-central1-b"]
+}
+#___________________________________________________
+variable "k8s-version" {
+  type    = string
+  default = "1.30"
+}
+variable "k8s-cluster-ip-range" {
+  type    = list(string)
+  default = ["10.200.0.0/16"]
+}
+variable "k8s-service-ip-range" {
+  type    = list(string)
+  default = ["10.96.0.0/16"]
+}
+variable "k8s-node-gr-disk" {
+  type    = list(string)
+  default = ["network-hdd"]
+}
+variable "k8s-node-gr-disk-size" {
+  type    = list(string)
+  default = ["30"]
 }
 #___________________________________________________

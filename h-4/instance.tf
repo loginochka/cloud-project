@@ -20,7 +20,7 @@ resource "yandex_compute_instance" "vm-public" {
     }
   }
   network_interface {
-    subnet_id  = yandex_vpc_subnet.public.id
+    subnet_id  = yandex_vpc_subnet.public-a.id
     nat        = true
     ip_address = var.vm-nat-ipv4
   }
